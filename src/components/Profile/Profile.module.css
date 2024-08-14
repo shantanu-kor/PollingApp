@@ -1,0 +1,44 @@
+.main {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 21px;
+  font-weight: 600;
+}
+.polls {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.profilePic {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+.addPoll {
+  margin-top: 15px;
+  font-size: 20px;
+  border: 1px solid green;
+  border-radius: 6px;
+  padding: 5px;
+  background-color: transparent;
+}
+.addPoll:hover {
+  background-color: lightgreen;
+  color: green;
+}
+.pollsList {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.headingPolls {
+  font-size: 30px;
+}

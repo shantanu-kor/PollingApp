@@ -1,0 +1,50 @@
+.main {
+  width: calc(100% - 40px);
+  height: 3.5rem;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: burlywood;
+  padding: 0px 20px;
+}
+.navLinks {
+  display: flex;
+  gap: 30px;
+}
+.name {
+  font-size: 25px;
+  color: indigo;
+  font-weight: 700;
+  border: 2px solid #fefefe;
+  padding: 3px;
+  border-radius: 4px;
+  pointer-events: none;
+}
+.inactiveLink {
+  color: white;
+  text-decoration: none;
+}
+.activeLink {
+  color: blue;
+  text-decoration: none;
+}
+.link {
+  font-size: 20px;
+  font-weight: 500;
+}
+.link:hover {
+  color: rgb(0, 128, 255);
+}
+.logout {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.logout:hover {
+  color: red;
+}

@@ -1,0 +1,74 @@
+.main {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  font-size: 21px;
+  font-weight: 600;
+}
+.quesMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  font-size: 18px;
+}
+.optionMain {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 18px;
+}
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.option {
+  display: flex;
+  gap: 20px;
+}
+.input {
+  font-size: 20px;
+  border: 1px solid gray;
+  border-radius: 6px;
+  padding: 5px;
+}
+.input:focus {
+  outline: none;
+  border: 2px solid blue;
+}
+.submit {
+  font-size: 20px;
+  border: 1px solid blue;
+  border-radius: 6px;
+  padding: 5px;
+  background-color: transparent;
+}
+.submit:hover {
+  background-color: lightblue;
+  color: blue;
+}
+.addOption {
+  font-size: 20px;
+  border: 1px solid green;
+  border-radius: 6px;
+  padding: 5px;
+  background-color: transparent;
+}
+.addOption:hover {
+  background-color: lightgreen;
+  color: green;
+}
+.delete {
+  font-size: 20px;
+  border: 1px solid red;
+  border-radius: 6px;
+  padding: 5px;
+  background-color: transparent;
+}
+.delete:hover {
+  background-color: lightsalmon;
+  color: red;
+}

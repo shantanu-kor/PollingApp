@@ -1,0 +1,35 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 30px;
+}
+.label {
+  font-size: 20px;
+}
+.input {
+  font-size: 20px;
+  border: 1px solid gray;
+  border-radius: 6px;
+  padding: 5px;
+}
+.input:focus {
+  outline: none;
+  border: 2px solid blue;
+}
+.td {
+  padding: 8px 0px;
+}
+.submit {
+  font-size: 20px;
+  border: 1px solid blue;
+  border-radius: 6px;
+  padding: 5px;
+  background-color: transparent;
+}
+.submit:hover {
+  background-color: lightblue;
+  color: blue;
+}

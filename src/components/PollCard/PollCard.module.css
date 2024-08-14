@@ -1,0 +1,51 @@
+.main {
+  width: 500px;
+  border: 1px solid blue;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.poll {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.question {
+  font-size: 20px;
+  font-weight: 600;
+}
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.option {
+  font-size: 18px;
+  font-weight: 400;
+}
+.votes {
+  color: blue;
+  padding-right: 5px;
+}
+.selectedOption {
+  background-color: #00ef006f;
+  padding: 3px;
+  border-radius: 8px;
+}
+.submit {
+  font-size: 18px;
+  border: 1px solid indigo;
+  border-radius: 6px;
+  padding: 5px;
+  background-color: transparent;
+}
+.submit:hover {
+  background-color: lightblue;
+  color: blue;
+}
