@@ -89,9 +89,13 @@ const Login = () => {
           </tr>
         </tbody>
       </table>
-      {processing ? "Please wait" : <button className={styles.submit} onClick={loginHandler}>
-        Login
-      </button>}
+      {processing ? (
+        "Please wait"
+      ) : (
+        <button className={styles.submit} onClick={loginHandler}>
+          Login
+        </button>
+      )}
     </div>
   );
 };

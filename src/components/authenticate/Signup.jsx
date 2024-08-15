@@ -12,6 +12,7 @@ const Signup = () => {
     name: "",
     picture: null,
   });
+  const [processing, setProcessing] = useState(false);
   const navigate = useNavigate();
 
   // handle profile picture
@@ -41,6 +42,7 @@ const Signup = () => {
 
   // handle the login
   const loginHandler = async () => {
+    setProcessing(true);
     try {
       if (
         details.email !== "" &&
@@ -63,11 +65,14 @@ const Signup = () => {
         localStorage.setItem("token", token);
         localStorage.setItem("userId", userId);
         window.dispatchEvent(new Event("storage"));
+        setProcessing(false);
         navigate("/profile");
       } else {
+        setProcessing(false);
         toast.error("Please enter all the credientails!", toastOptions);
       }
     } catch (err) {
+      setProcessing(false);
       toast.error(err.response.data.message, toastOptions);
       // console.log(err);
     }
@@ -147,9 +152,13 @@ const Signup = () => {
           </tr>
         </tbody>
       </table>
-      <button className={styles.submit} onClick={loginHandler}>
-        Login
-      </button>
+      {processing ? (
+        "Please wait"
+      ) : (
+        <button className={styles.submit} onClick={loginHandler}>
+          Signup
+        </button>
+      )}
     </div>
   );
 };
