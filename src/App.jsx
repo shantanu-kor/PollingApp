@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import Login from "./components/authenticate/Login";
 import Signup from "./components/authenticate/Signup";
 import Home from "./components/Home/Home";
@@ -20,6 +20,7 @@ import axios from "axios";
 import { authHeader } from "./helpers";
 
 function App() {
+  const location = useLocation();
   const navigate = useNavigate();
   const { socket } = useContext(SocketContext);
   const dispatch = useDispatch();
@@ -38,7 +39,7 @@ function App() {
     if (!localStorage.getItem("token")) {
       navigate('/login');
     } else {
-      navigate('/profile');
+      navigate(location.pathname);
     }
 
     return () => {
