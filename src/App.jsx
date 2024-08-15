@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import Login from "./components/authenticate/Login";
 import Signup from "./components/authenticate/Signup";
 import Home from "./components/Home/Home";
@@ -20,6 +20,7 @@ import axios from "axios";
 import { authHeader } from "./helpers";
 
 function App() {
+  const navigate = useNavigate();
   const { socket } = useContext(SocketContext);
   const dispatch = useDispatch();
   const [isAuth, setIsAuth] = useState(false);
@@ -34,6 +35,7 @@ function App() {
     }
     window.addEventListener("storage", setAuth);
     window.dispatchEvent(new Event("storage"));
+    navigate('/login');
 
     return () => {
       window.removeEventListener("storage", setAuth);
