@@ -35,7 +35,11 @@ function App() {
     }
     window.addEventListener("storage", setAuth);
     window.dispatchEvent(new Event("storage"));
-    navigate('/login');
+    if (!localStorage.getItem("token")) {
+      navigate('/login');
+    } else {
+      navigate('/profile');
+    }
 
     return () => {
       window.removeEventListener("storage", setAuth);
