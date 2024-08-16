@@ -55,6 +55,7 @@ const AddPoll = () => {
         toast.error("Please fill all fields", toastOptions);
       }
     } catch (err) {
+      toast.error("Please refresh before adding another poll", toastOptions);
       console.log(err);
     }
   };
