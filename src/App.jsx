@@ -22,15 +22,17 @@ import { authHeader } from "./helpers";
 function App() {
   const location = useLocation();
   const navigate = useNavigate();
-  const { socket } = useContext(SocketContext);
+  const { socket, newSocketHandler } = useContext(SocketContext);
   const dispatch = useDispatch();
   const [isAuth, setIsAuth] = useState(false);
 
   useEffect(() => {
     function setAuth() {
       if (localStorage.getItem("token")) {
+        newSocketHandler();
         setIsAuth(true);
       } else {
+        socket.disconnect();
         setIsAuth(false);
       }
     }
