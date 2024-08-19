@@ -2,7 +2,7 @@
 
 create .env with variables - 
 
-VITE_BE_URL = URL of backend eg. "https://github.com/shantanu-kor/PollingAppBE"
+VITE_BE_URL = URL of backend eg. "https://pollingappbe.onrender.com"
 
 To run,
 
